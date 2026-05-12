@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>NexusHost - Game Server Panel</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/styles.css">
+	</head>
+	<body>
+		<!--Sidebar -->
+		<aside id="sidebar">
+			<div class="sidebar-logo">
+				<div class="logo-icon">⚡</div>
+				<div class="logo-text">Nexus<span>Host</span></div>
+			</div>
+			<div classs="node-selector">
+				<label>Active Node</label>
+				<button class="node-status-btn" onclick="showPage('nodes')">
+					<span><span class="node-status-dot"></span><span id="active-node-name">Node-Alpha(Local)</span></span>
+					<span>▾</span>
+				</button>
+			</div>
+			<nav>
+				<div class="nav-selection">
+					<div class="nav-section-title">Overview</div>
+					<div class="nav-item active" onclick="showPage('servers')">
+						<span class="icon">🎮</span><span>Servers</span>
+						<span classs="nav-badge" id="srv-badge">3</span>
+					</div>
+				</div>
+				<div class="nav-selection">
+					<div class="nav-section-title">Game Types</div>
+					<div class="nav-item" onclick="showPage('minecraft-java')">
+						<span class="icon">⛏️</span><span>Minecraft Java</span>
+					</div>
+					<div class="nav-item" onclick="showPage('minecraft-bedrock')">
+						<span class="icon">🪨</span><span>Minecraft Bedrock</span>
+					</div>
+					<div class="nav-item" onclick="showPage('steam')">
+						<span class="icon">🎲</span><span>Steam Games</span>
+					</div>
+				</div>
+				<div class="nav-selection">
+					<div class="nav-section-title">Infrastructure</div>
+				</div>
+			</nav>
+		</aside>
+	</body>
+</html>

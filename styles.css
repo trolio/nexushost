@@ -1,0 +1,135 @@
+:root {
+	--bg: #0a0b0f;
+	--surface: #111318;
+	--surface2: #181b23;
+	--border: #1e2330;
+	--accent: #00e5ff;
+	--accent2: #7c3aed;
+	--accent3: #10b981;
+	--warn: #f59e0b;
+	--danger: #ef4444;
+	--text: #e2e80f;
+	--muted: #64748b;
+	--mc-java; #e67e22;
+	--mc-bedrock: #27ae60;
+	--steam: #1b2838;
+	--steam-accent: #66c0f4;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: 'Syne', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	overflow-x: hidden;
+}
+
+#sidebar {
+	width: 240px;
+	min-height: 100vh;
+	background: var(--surface);
+	border-right: 1px solid var(--border);
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	transition: width 0.3s;
+}
+
+.sidebar-logo {
+	padding: 24px 20px 20px;
+	border-bottom: 1px solid var(--border);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.logo-icon {
+	width: 36px;
+	height: 36px;
+	background: linear-gradient(135deg, var(--accent), var(accent2));
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	flex-shrink: 0;
+}
+
+.logo-text {
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: -0.5px;
+}
+
+.logo-text span {
+	color: var(--accent);
+}
+
+.node-selector {
+	padding: 16px 16px 8px;
+	border-bottom: 1px solid var(--border);
+}
+
+.node-selector label {
+	font-size: 10px;
+	color: var(--muted);
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.node-select-btn {
+	width: 100%;
+	background: var(--surface2);
+	border: 1px solid var(--border);
+	color: var(--text);
+	font-family: 'Syne', sans-serif;
+	font-size: 13px;
+	padding: 8px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: border-color 0.2s;
+}
+
+.node-select-btn:hover {
+	border-color: var(--accent);
+}
+
+.node-status-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--accent3);
+	display: inline-block;
+	margin-right: 6px;
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {opacity: 1}50%{opacity: 0.4}
+}
+
+nav {
+	flex: 1;
+	padding: 16px 12px;
+	overflow-y: auto;
+}
