@@ -287,7 +287,29 @@
   				</div>
   			</div>
 
-  			
+  			<!--File Manager Page-->
+  			<div class="page" id="page-files">
+  				<div style="display:grid;grid-template-columns:220px 1fr;gap:16px">
+  					<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px">
+  						<div class="section-title" style="margin-bottom:12px;font-size:13px">Servers</div>
+  						<div id="file-server-tree"></div>
+  					</div>
+  					<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+  						<div style="padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+  							<div style="font-family:'Space Mono', monospace;font-size:12px;color:var(--muted)" id="file-path">/ SurvivalMC /</div>
+  							<div style="display:flex;gap:8px;">
+  								<button class="btn btn-ghost btn-sm">📤 Upload</button>
+  								<button class="btn btn-ghost btn-sm">📁 New Folder</button>
+  								<button class="btn btn-primary btn-sm">📄 New File</button>
+  							</div>
+  						</div>
+  						<table class="data-table" id="file-list">
+  							<thread><tr><th>Name</th><th>Size</th><th>Modified</th><th>Actions</th></tr></thread>
+  							<tbody id="file-tbody"></tbody>
+  						</table>
+  					</div>
+  				</div>
+  			</div>
 		</main>
 	</body>
 </html>
