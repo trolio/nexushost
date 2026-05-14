@@ -239,6 +239,24 @@
   				</div>
   				<div class="servers-grid" id="steam-server-list"></div>
   			</div>
+
+  			<!--Nodes Page-->
+  			<div class="page" id="page-nodes">
+  				<div class="section-header">
+  					<div>
+  						<div class="section-title">Connected Nodes</div>
+  						<div classs="section-sub">Manage Windows hosts running the NexusHost Agent</div>
+  					</div>
+  					<button class="btn btn-primary btn-sm" onclick="openModal('modal-add-node')">+ Add Node</button>
+  				</div>
+  				<div class="nodes-grid" id="page-nodes"></div>
+  				<div style="margin-top:24px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px">
+  					<div class="section-title" style="margin-bottom:12px">🔗 Node Agent Installation</div>
+  					<p style="font-size:13px;color:var(--muted);margin-bottom:12px">Run this PowerShell command on each Windows machine you want to add as a node</p>
+  					<div class="node-block">irm https://nexushost.local/agent/install.ps1 | iex -Token YOUR_PANEL_TOKEN</div>
+  					<p style="font-size:12px;color:var(--muted);margin-top:10px">The agent runs as a Windows Service on port <span style="color:var(--accent)">8080</span> and communicates back to this panel over websocket.</p>
+  				</div>
+  			</div>
 		</main>
 	</body>
 </html>
