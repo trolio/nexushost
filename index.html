@@ -225,6 +225,20 @@
   				</div>
   				<div class="servers-grid" id="bedrock-server-list"></div>
   			</div>
+
+  			<!--Steam Games-->
+  			<div class="page" id="page-steam">
+  				<div class="alert alert-info">🎲 Steam servers are managed via SteamCMD. Nexus Host will auto-download and update game files.</div>
+  				<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px">
+  					<div class="section-title" style="margin-bottom:14px">Supported Steam Games</div>
+  					<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px" id="steam-game-library"></div>
+  				</div>
+  				<div class="section-header">
+  					<div class="section-title">Steam Servers</div>
+  					<button class="btn btn-primary btn-sm" onclick="openModal('modal-create')">+ Create Steam Server</button>
+  				</div>
+  				<div class="servers-grid" id="steam-server-list"></div>
+  			</div>
 		</main>
 	</body>
 </html>
