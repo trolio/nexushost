@@ -310,6 +310,31 @@
   					</div>
   				</div>
   			</div>
+
+  			<!--Console Page-->
+  			<div class="page" id="page-console">
+  				<div style="display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:start">
+  					<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px">
+  						<div class="section-title" style="margin-bottom:12px;font-size:13px">Select Server</div>
+  						<div class="console-server-list"></div>
+  					</div>
+  					<div>
+  						<div id="console-panel">
+  							<div class="console-header">
+  								<div class="console-dot" style="background:#ef4444"></div>
+  								<div class="console-dot" style="background:#f59e0b"></div>
+  								<div class="console-dot" style="background:#10b981"></div>
+  								<span style="font-family:'Space Mono',monospace;font-size:12px;color:var(--muted);margin-left:8px" id="console-server-name">SurvivalMC - Console</span>
+  							</div>
+  							<div class="console-output" id="console-out"></div>
+  							<div class="console-input">
+  								<span class="console-prompt">*gt;</span>
+  								<input type="text" id="console-cmd" placeholder="Enter server command..." onkeydown="sendCmd(event)">
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
 		</main>
 	</body>
 </html>
